@@ -371,30 +371,6 @@ p { margin: 0; }
 .scard h3 { font-size: clamp(1.35rem, 2.2vw, 1.75rem); margin-bottom: .6rem; }
 .scard p { color: var(--muted); }
 
-/* ---------- Band (vent iris) ---------- */
-.band { position: relative; height: 220vh; background: var(--bg-2); }
-.band__pin { position: sticky; top: 0; height: 100vh; height: 100svh; display: grid; place-items: center; overflow: hidden; }
-.band__iris { position: absolute; inset: 0; clip-path: circle(18% at 50% 50%); will-change: clip-path; }
-.band__iris img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.3); will-change: transform; }
-.band__iris::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle, rgba(14, 26, 43, .2), rgba(14, 26, 43, .6)); }
-.band__grille {
-  position: absolute; width: 38vmin; aspect-ratio: 1; border-radius: 50%; pointer-events: none;
-  background: repeating-conic-gradient(from 0deg, rgba(255, 255, 255, .55) 0 2deg, transparent 2deg 15deg);
-  -webkit-mask: radial-gradient(circle, transparent 20%, #000 21%, #000 69%, transparent 70%);
-  mask: radial-gradient(circle, transparent 20%, #000 21%, #000 69%, transparent 70%);
-  will-change: transform, opacity;
-}
-.band__text {
-  position: relative; z-index: 2; color: #fff; text-align: center;
-  font-family: var(--f-display); font-weight: 600; font-size: clamp(2.6rem, 9vw, 8rem); letter-spacing: -.06em; line-height: .95;
-  text-shadow: 0 10px 40px rgba(0, 0, 0, .3);
-}
-.band__text span { display: inline-block; }
-.band__text .grad { text-shadow: none; filter: drop-shadow(0 10px 30px rgba(0, 0, 0, .3)); }
-.no-js .band, .reduced .band { height: auto; }
-.no-js .band__pin, .reduced .band__pin { position: relative; height: 70vh; }
-.no-js .band__iris, .reduced .band__iris { clip-path: none; }
-
 /* ---------- Process ---------- */
 .steps { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.2rem, 3vw, 2.5rem); }
 .steps__line { position: absolute; left: 16.66%; right: 16.66%; top: 34px; height: 2px; background: var(--line); }
