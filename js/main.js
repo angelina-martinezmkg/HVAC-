@@ -566,19 +566,6 @@
     }
   });
 
-  /* ---------- Band: vent iris opens ---------- */
-  (function band() {
-    var bandEl = $('.band');
-    if (!bandEl) return;
-    var tl = gsap.timeline({ scrollTrigger: { trigger: bandEl, start: 'top top', end: 'bottom bottom', scrub: 0.6 } });
-    tl.fromTo('.band__iris', { clipPath: 'circle(18% at 50% 50%)' }, { clipPath: 'circle(75% at 50% 50%)', ease: 'power2.inOut' }, 0)
-      .fromTo('.band__iris img', { scale: 1.35 }, { scale: 1, ease: 'none' }, 0)
-      .fromTo('.band__grille', { rotate: 0, scale: 1, opacity: 1 }, { rotate: 220, scale: 3.2, opacity: 0, ease: 'power1.in' }, 0)
-      .fromTo('.band__text span:first-child', { xPercent: -40, opacity: 0 }, { xPercent: 0, opacity: 1, ease: 'power3.out', duration: 0.45 }, 0.25)
-      .fromTo('.band__text span.grad', { xPercent: 40, opacity: 0 }, { xPercent: 0, opacity: 1, ease: 'power3.out', duration: 0.45 }, 0.3)
-      .to('.band__text', { scale: 1.08, ease: 'none', duration: 0.3 }, 0.7);
-  })();
-
   /* ---------- Process ---------- */
   var mm = gsap.matchMedia();
   mm.add({ wide: '(min-width: 641px)', narrow: '(max-width: 640px)' }, function (ctx) {
